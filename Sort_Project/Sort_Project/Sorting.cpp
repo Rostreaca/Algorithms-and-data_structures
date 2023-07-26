@@ -2,15 +2,16 @@
 
 using namespace std;
 
-int Unsorted_array[8] = {7,5,4,2,3,1,6,8};
+int Unsorted_array[8] = { 7,5,4,2,3,1,6,8 };
 int arrayLength = sizeof(Unsorted_array) / sizeof(Unsorted_array[0]);
+int Merged_array[8];
 
 void BubbleSort(int a[])
 {
-	for (int i=0 ; i < arrayLength-1; i++)
+	for (int i = 0; i < arrayLength - 1; i++)
 	{
 		int temp = 0;
-		for (int j = 0; j < arrayLength-1; j++)
+		for (int j = 0; j < arrayLength - 1; j++)
 		{
 			if (a[j] > a[j + 1])
 			{
@@ -36,7 +37,7 @@ void SelectionSort(int a[])
 				index = j;
 			}
 		}
-		
+
 		temp = a[i];
 		a[i] = min_num;
 		a[index] = temp;
@@ -50,7 +51,7 @@ void insertionSort(int a[]) {
 	for (i = 1; i < arrayLength; i++)
 	{
 		remember = a[i];
-		for (j= i - 1; j>=0 && a[j]>remember ;j--)
+		for (j = i - 1; j >= 0 && a[j] > remember; j--)
 		{
 			a[j + 1] = a[j];
 		}
@@ -58,14 +59,14 @@ void insertionSort(int a[]) {
 	}
 }
 
-void QuickSort(int a[],int _Left, int _Right)
+void QuickSort(int a[], int _Left, int _Right)
 {
 	int Left = _Left;
 	int Right = _Right;
-	int pivot = a[(Left+Right)/2];
+	int pivot = a[(Left + Right) / 2];
 	int temp;
-	
-	while ( Left <= Right) // 오른쪽 값이 왼쪽 값보다 크면
+
+	while (Left <= Right) // 오른쪽 값이 왼쪽 값보다 크면
 	{
 		while (a[Left] < pivot) Left++; //왼쪽에서부터 pivot 보다 큰 값 찾기
 		while (a[Right] > pivot) Right--; // 오른쪽에서부터 pivot 보다 작은 값 찾기
@@ -86,24 +87,76 @@ void QuickSort(int a[],int _Left, int _Right)
 
 }
 
+void Merge(int a[], int start, int end)
+{
+	int mid = (start + end) / 2;
+	int i = start;
+	int j = mid + 1;
+	int k = start;
+	while (i <= mid && j <= end)
+	{
+		if (a[i] > a[j])
+		{
+			Merged_array[k++] = a[j++];
+		}
+		else
+		{
+			Merged_array[k++] = a[i++];
+		}
+	}
+
+	if (i > mid)
+	{
+		while (j <= end)
+		{
+			Merged_array[k++] = a[j++];
+		}
+	}
+	else
+	{
+		while (i <= mid)
+		{
+			Merged_array[k++] = a[i++];
+		}
+	}
+
+	for (int n = start; n <= end; n++)
+	{
+		a[n] = Merged_array[n];
+	}
+}
+
+void MergeSort(int a[], int start, int end)
+{
+	if (start >= end) {
+		return;
+	}
+	int mid = (start + end) / 2;
+	MergeSort(a, start, mid);
+	MergeSort(a, mid + 1, end);
+	Merge(a, start, end);
+
+}
+
 int main()
 {
 	for (int i = 0; i < arrayLength; i++)//before sorting
 	{
 		cout << Unsorted_array[i];
 	}
-	cout<<endl;
+	cout << endl;
 
 	cout << "정렬 방법을 선택해주세요" << endl;
-	cout << "버블정렬 : 1, 선택정렬 : 2, 삽입정렬 : 3 퀵 정렬 : 4"<<endl;
+	cout << "버블정렬 : 1, 선택정렬 : 2, 삽입정렬 : 3 퀵 정렬 : 4 병합 정렬 : 5" << endl;
 	int input;
 	cin >> input;
 	if (input == 1) BubbleSort(Unsorted_array); //sorting
 	else if (input == 2) SelectionSort(Unsorted_array); //sorting
 	else if (input == 3) insertionSort(Unsorted_array); //sorting
 	else if (input == 4) QuickSort(Unsorted_array, 0, arrayLength - 1); //sorting
-   
-	
+	else if (input == 5) MergeSort(Unsorted_array, 0, arrayLength - 1); //sorting
+
+
 
 	for (int i = 0; i < arrayLength; i++) //after sorting
 	{
