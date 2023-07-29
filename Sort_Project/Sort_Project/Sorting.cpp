@@ -87,9 +87,16 @@ void QuickSort(int a[], int _Left, int _Right)
 
 }
 
-void Merge(int a[], int start, int end)
+
+void MergeSort(int a[], int start, int end)
 {
+	if (start >= end) {
+		return;
+	}
 	int mid = (start + end) / 2;
+	MergeSort(a, start, mid);
+	MergeSort(a, mid + 1, end);
+
 	int i = start;
 	int j = mid + 1;
 	int k = start;
@@ -119,23 +126,50 @@ void Merge(int a[], int start, int end)
 			Merged_array[k++] = a[i++];
 		}
 	}
-
 	for (int n = start; n <= end; n++)
 	{
 		a[n] = Merged_array[n];
 	}
+
 }
 
-void MergeSort(int a[], int start, int end)
+void heapify(int a[], int n, int i)
 {
-	if (start >= end) {
-		return;
-	}
-	int mid = (start + end) / 2;
-	MergeSort(a, start, mid);
-	MergeSort(a, mid + 1, end);
-	Merge(a, start, end);
+	int root = i;
+	int left = 2 * i + 1;
+	int right = 2 * i + 2;
+	
+	//left 혹은 right 값이 배열의 범위를 벗어나지 않으면서 가장 큰 값 찾기
+	if (left < n && a[left] > a[root]) root = left; //왼쪽 노드가 i값 보다 큰 값
+	if (right <n && a[right] > a[root]) root = right; //오른쪽 노드가 i값 보다 큰 값
 
+	int temp;
+	if (root != i) //i가 가장 큰 값이 아니면
+	{
+		temp = a[i];
+		a[i] = a[root];
+		a[root] = temp; // 가장 큰 수와를 루트노드의 위치를 교체(swap(a[i],a[root]))
+		heapify(a, n, root); //재귀를 반복하면서 최대 힙 트리가 생성됨
+	}
+}
+
+void HeapSort(int a[], int n)
+{
+	for (int i = (n - 1) / 2; i >= 0; i--)
+	{
+		heapify(a, n, i); //부모 노드가 자식 노드보다 큰 최대 힙 트리 생성
+	}
+
+	int temp;
+	
+	for (int i = n - 1; i >= 0; i--)
+	{
+		temp = a[0];
+		a[0] = a[i];
+		a[i] = temp; //배열의 마지막 인덱스 값과 0번째 인덱스 값을 교체해줌(swap(a[0],a[i]))
+
+		heapify(a, i, 0); //마지막 인덱스를 제외하고 최댓값(루트 노드) 탐색 및 재설정
+	}
 }
 
 int main()
@@ -147,7 +181,7 @@ int main()
 	cout << endl;
 
 	cout << "정렬 방법을 선택해주세요" << endl;
-	cout << "버블정렬 : 1, 선택정렬 : 2, 삽입정렬 : 3 퀵 정렬 : 4 병합 정렬 : 5" << endl;
+	cout << "버블정렬 : 1, 선택정렬 : 2, 삽입정렬 : 3 퀵 정렬 : 4 병합 정렬 : 5 힙 정렬 : 6" << endl;
 	int input;
 	cin >> input;
 	if (input == 1) BubbleSort(Unsorted_array); //sorting
@@ -155,7 +189,7 @@ int main()
 	else if (input == 3) insertionSort(Unsorted_array); //sorting
 	else if (input == 4) QuickSort(Unsorted_array, 0, arrayLength - 1); //sorting
 	else if (input == 5) MergeSort(Unsorted_array, 0, arrayLength - 1); //sorting
-
+	else if (input == 6) HeapSort(Unsorted_array, arrayLength); //sorting
 
 
 	for (int i = 0; i < arrayLength; i++) //after sorting
