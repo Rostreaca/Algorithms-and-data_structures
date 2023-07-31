@@ -1,0 +1,4 @@
+﻿  뒤에 있는 큰 수 찾기.cpp
+C:\Users\frees\Documents\GitHub\Sort_Project\Algorithms-and-data_structures\Codetest_Programmers\Codetest_Programmers\뒤에 있는 큰 수 찾기.cpp(14,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\frees\Documents\GitHub\Sort_Project\Algorithms-and-data_structures\Codetest_Programmers\Codetest_Programmers\뒤에 있는 큰 수 찾기.cpp(29,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  Codetest_Programmers.vcxproj -> C:\Users\frees\Documents\GitHub\Sort_Project\Algorithms-and-data_structures\Codetest_Programmers\Debug\Codetest_Programmers.exe
