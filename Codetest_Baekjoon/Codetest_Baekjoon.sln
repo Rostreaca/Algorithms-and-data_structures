@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.33423.256
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Codetest_Baekjoon", "Codetest_Baekjoon\Codetest_Baekjoon.vcxproj", "{E0B4EA56-92FD-46F2-ADDD-A18F93A9ACF1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "체스판 다시 칠하기", "체스판 다시 칠하기\체스판 다시 칠하기.vcxproj", "{C841ECE0-CC83-4ADF-9D31-D1BB7B6D461D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{E0B4EA56-92FD-46F2-ADDD-A18F93A9ACF1}.Release|x64.Build.0 = Release|x64
 		{E0B4EA56-92FD-46F2-ADDD-A18F93A9ACF1}.Release|x86.ActiveCfg = Release|Win32
 		{E0B4EA56-92FD-46F2-ADDD-A18F93A9ACF1}.Release|x86.Build.0 = Release|Win32
+		{C841ECE0-CC83-4ADF-9D31-D1BB7B6D461D}.Debug|x64.ActiveCfg = Debug|x64
+		{C841ECE0-CC83-4ADF-9D31-D1BB7B6D461D}.Debug|x64.Build.0 = Debug|x64
+		{C841ECE0-CC83-4ADF-9D31-D1BB7B6D461D}.Debug|x86.ActiveCfg = Debug|Win32
+		{C841ECE0-CC83-4ADF-9D31-D1BB7B6D461D}.Debug|x86.Build.0 = Debug|Win32
+		{C841ECE0-CC83-4ADF-9D31-D1BB7B6D461D}.Release|x64.ActiveCfg = Release|x64
+		{C841ECE0-CC83-4ADF-9D31-D1BB7B6D461D}.Release|x64.Build.0 = Release|x64
+		{C841ECE0-CC83-4ADF-9D31-D1BB7B6D461D}.Release|x86.ActiveCfg = Release|Win32
+		{C841ECE0-CC83-4ADF-9D31-D1BB7B6D461D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
