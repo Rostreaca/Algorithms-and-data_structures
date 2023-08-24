@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "-2진수", "-2진수\-2진�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "알고스팟", "알고스팟\알고스팟.vcxproj", "{D5DBA687-E160-4BF9-90D1-E516987E3ABB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "케빈 베이컨의 6단계 법칙", "케빈 베이컨의 6단계 법칙\케빈 베이컨의 6단계 법칙.vcxproj", "{53782A0A-68E8-4E39-AA2B-00D167C87C3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{D5DBA687-E160-4BF9-90D1-E516987E3ABB}.Release|x64.Build.0 = Release|x64
 		{D5DBA687-E160-4BF9-90D1-E516987E3ABB}.Release|x86.ActiveCfg = Release|Win32
 		{D5DBA687-E160-4BF9-90D1-E516987E3ABB}.Release|x86.Build.0 = Release|Win32
+		{53782A0A-68E8-4E39-AA2B-00D167C87C3A}.Debug|x64.ActiveCfg = Debug|x64
+		{53782A0A-68E8-4E39-AA2B-00D167C87C3A}.Debug|x64.Build.0 = Debug|x64
+		{53782A0A-68E8-4E39-AA2B-00D167C87C3A}.Debug|x86.ActiveCfg = Debug|Win32
+		{53782A0A-68E8-4E39-AA2B-00D167C87C3A}.Debug|x86.Build.0 = Debug|Win32
+		{53782A0A-68E8-4E39-AA2B-00D167C87C3A}.Release|x64.ActiveCfg = Release|x64
+		{53782A0A-68E8-4E39-AA2B-00D167C87C3A}.Release|x64.Build.0 = Release|x64
+		{53782A0A-68E8-4E39-AA2B-00D167C87C3A}.Release|x86.ActiveCfg = Release|Win32
+		{53782A0A-68E8-4E39-AA2B-00D167C87C3A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
