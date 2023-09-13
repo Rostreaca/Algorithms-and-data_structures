@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "게임 맵 최단거리", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "피로도", "피로도\피로도.vcxproj", "{2A618A5B-E1B3-4F07-BDD0-046DEBF6BF36}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "H-Index", "H-Index\H-Index.vcxproj", "{24E01D6F-6C0B-4DD6-9CFF-D1F396775EB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{2A618A5B-E1B3-4F07-BDD0-046DEBF6BF36}.Release|x64.Build.0 = Release|x64
 		{2A618A5B-E1B3-4F07-BDD0-046DEBF6BF36}.Release|x86.ActiveCfg = Release|Win32
 		{2A618A5B-E1B3-4F07-BDD0-046DEBF6BF36}.Release|x86.Build.0 = Release|Win32
+		{24E01D6F-6C0B-4DD6-9CFF-D1F396775EB2}.Debug|x64.ActiveCfg = Debug|x64
+		{24E01D6F-6C0B-4DD6-9CFF-D1F396775EB2}.Debug|x64.Build.0 = Debug|x64
+		{24E01D6F-6C0B-4DD6-9CFF-D1F396775EB2}.Debug|x86.ActiveCfg = Debug|Win32
+		{24E01D6F-6C0B-4DD6-9CFF-D1F396775EB2}.Debug|x86.Build.0 = Debug|Win32
+		{24E01D6F-6C0B-4DD6-9CFF-D1F396775EB2}.Release|x64.ActiveCfg = Release|x64
+		{24E01D6F-6C0B-4DD6-9CFF-D1F396775EB2}.Release|x64.Build.0 = Release|x64
+		{24E01D6F-6C0B-4DD6-9CFF-D1F396775EB2}.Release|x86.ActiveCfg = Release|Win32
+		{24E01D6F-6C0B-4DD6-9CFF-D1F396775EB2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
